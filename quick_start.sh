@@ -10,4 +10,5 @@ source $(pwd)/.env
 # Create and up detach Service Container
 docker-compose build
 docker-compose up -d
+sleep 10s
 docker-compose logs
