@@ -12,7 +12,13 @@ Puedes correr un ambiente standalone de spark en local
 
 # Inicio
 
-Una vez  `git clone https://github.com/HubertRonald/SparkWork.git` se puede iniciar rápidamente desde la terminal con:
+Una vez se clone el proyecto
+
+```bash
+git clone https://github.com/HubertRonald/SparkWork.git
+``` 
+
+Se puede iniciar rápidamente desde la terminal con:
 
 ```bash
 ./quick_start.sh
