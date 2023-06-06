@@ -18,7 +18,7 @@ Una vez se clone el proyecto
 git clone https://github.com/HubertRonald/SparkWork.git
 ``` 
 
-Se puede iniciar rápidamente desde la terminal con:
+Se puede iniciar rápidamente desde la terminal con (desde la carpeta `SparkWork`):
 
 ```bash
 ./quick_start.sh
