@@ -1,0 +1,19 @@
+version: '2'
+services:
+  spark:
+    build:
+      context: '.'
+      dockerfile: './build/Dockerfile'
+      args:
+        spark_work: "${spark_work}"
+    image: "${image_name}:latest"
+    container_name: "${container_name}"
+    stdin_open: true
+    tty: true
+    volumes:
+      - "./${local_work}/:${spark_work}"
+    env_file:
+      - .env
+    ports:
+      - 8888:8888
+      - 4040:4040
