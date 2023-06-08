@@ -18,6 +18,14 @@ Una vez se clone el proyecto
 git clone https://github.com/HubertRonald/SparkWork.git
 ``` 
 
+Luego habilita los siguientes scripts de bash para que puedan ser ejecutados:
+
+```bash
+chmod +x quick_start.sh stop.sh
+```
+
+Después asegurase de tener **docker encendido**
+
 Se puede iniciar rápidamente desde la terminal con (desde la carpeta `SparkWork`):
 
 ```bash
