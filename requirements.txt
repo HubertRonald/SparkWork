@@ -1,0 +1,3 @@
+findspark
+jupyterlab_theme_solarized_dark
+jupyterlab-legos-ui

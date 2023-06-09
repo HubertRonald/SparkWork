@@ -44,7 +44,7 @@ docker compose logs
 
 Asimismo asegurarse de no tener abierto alguna sesión previa. Caso contratio cerrar esa pestaña del navegador y ejecutar nuevamente el script `./quick_start.sh` en la terminal.
 
-Hecho lo anterior se debería ver una carpeta work en la parte izquierda al ingresar se verá el notebook `Spark_DataFrames_Ejemplo.ipynb`
+Hecho lo anterior en la parte izquierda, se verá el notebook `Spark_DataFrames_Ejemplo.ipynb`
 
 ![](./src/notebook.png)
 

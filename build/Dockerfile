@@ -5,6 +5,7 @@ ENV PYTHONUNBUFFERED 1
 ARG spark_work
 
 WORKDIR ${spark_work}
-RUN pip install findspark jupyterlab_theme_solarized_dark jupyterlab-lego-boost
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
 
 EXPOSE 8888
