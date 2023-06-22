@@ -5,15 +5,30 @@ services:
       context: '.'
       dockerfile: './build/Dockerfile'
       args:
-        spark_work: "${spark_work}"
+        user_root: "${user_root}"
+        password: "${password}"
+        user: "${user}"
+    user: "${user_root}"
     image: "${image_name}:latest"
     container_name: "${container_name}"
-    stdin_open: true
-    tty: true
+    stdin_open: true  # docker run -i
+    tty: true         # docker run -t
     volumes:
       - "./${local_work}/:${spark_work}"
     env_file:
       - .env
+    working_dir: "${spark_work}"
+    environment:
+      # CHOWN_HOME: "yes"
+      # GEN_CERT: "yes"
+      GRANT_SUDO: "yes"
+      # NB_UID: 1000
+      # NB_GID: 100
+      NB_USER: "${user}"
+      PASSWORD: "${password}"
+      # JUPYTER_TOKEN: "easy"
+      # IS_LOCAL_DOCKER_NOTEBOOK: false
+      # IS_DOCKER_DEVELOPMENT: true
     ports:
       - 8888:8888
       - 4040:4040
