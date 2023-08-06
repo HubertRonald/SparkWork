@@ -39,12 +39,12 @@ Copia el siguiente enlace
 Si en caso no apareciera en los logs, intentar los siguiente:
 
 ```bash
-docker compose logs
+docker-compose logs
 ```
 
 Asimismo asegurarse de no tener abierto alguna sesión previa. Caso contratio cerrar esa pestaña del navegador y ejecutar nuevamente el script `./start.sh` en la terminal.
 
-Hecho lo anterior en la parte izquierda, se verá el notebook `Spark_DataFrames_Ejemplo.ipynb`
+Hecho lo anterior en la parte izquierda, se verá el notebook [Spark_DataFrames_Ejemplo.ipynb](work/Spark_DataFrames_Ejemplo.ipynb)
 
 ![](./src/notebook.png)
 
