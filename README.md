@@ -21,7 +21,7 @@ git clone https://github.com/HubertRonald/SparkWork.git
 Luego habilita los siguientes scripts de bash para que puedan ser ejecutados:
 
 ```bash
-chmod +x quick_start.sh stop.sh
+chmod +x start.sh stop.sh
 ```
 
 Después asegurase de tener **docker encendido**
@@ -29,7 +29,7 @@ Después asegurase de tener **docker encendido**
 Se puede iniciar rápidamente desde la terminal con (desde la carpeta `SparkWork`):
 
 ```bash
-./quick_start.sh
+./start.sh
 ```
 
 Copia el siguiente enlace
@@ -42,12 +42,14 @@ Si en caso no apareciera en los logs, intentar los siguiente:
 docker compose logs
 ```
 
-Asimismo asegurarse de no tener abierto alguna sesión previa. Caso contratio cerrar esa pestaña del navegador y ejecutar nuevamente el script `./quick_start.sh` en la terminal.
+Asimismo asegurarse de no tener abierto alguna sesión previa. Caso contratio cerrar esa pestaña del navegador y ejecutar nuevamente el script `./start.sh` en la terminal.
 
 Hecho lo anterior en la parte izquierda, se verá el notebook `Spark_DataFrames_Ejemplo.ipynb`
 
 ![](./src/notebook.png)
 
+# Datos Zip Code
+El archivo [zipcodesUSDummy](./work/data/zipcodeUSDummy.json) es una pequeña muestra tomada de [US-Zip-Codes-JSON](https://github.com/millbj92/US-Zip-Codes-JSON/tree/master). Creditos a [Brandom Miller](https://brandonmiller.io)
 
 # Enlaces
 
@@ -55,6 +57,7 @@ Hecho lo anterior en la parte izquierda, se verá el notebook `Spark_DataFrames_
 
 - [Specific Docker Image Options](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/specifics.html#specific-docker-image-options)
 
+- [US-Zip-Codes-JSON](https://github.com/millbj92/US-Zip-Codes-JSON/tree/master)
 
 # .gitignore
 
