@@ -1,14 +1,22 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-# autor: @hubertronald
+ROOT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+cd "$ROOT_DIR"
 
-# Available environment variables
-# file .env has default environment variables
-source $(pwd)/.env
+if docker compose version >/dev/null 2>&1; then
+  COMPOSE=(docker compose)
+elif command -v docker-compose >/dev/null 2>&1; then
+  COMPOSE=(docker-compose)
+else
+  echo "ERROR: Docker Compose is required (docker compose or docker-compose)." >&2
+  exit 2
+fi
 
+"${COMPOSE[@]}" up --build -d spark
+"${COMPOSE[@]}" ps
 
-# Create and up detach Service Container
-docker-compose build
-docker-compose up -d
-sleep 10s
-docker-compose logs
+echo
+echo "Jupyter authentication uses the server-generated token; no password is stored in the repository."
+echo "Use the URL/token printed below."
+"${COMPOSE[@]}" logs --tail=80 spark

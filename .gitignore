@@ -236,3 +236,7 @@ $RECYCLE.BIN/
 
 # Checkpoints notebooks
 .ipynb_checkpoints
+
+# SparkWork local environment (2026 refresh)
+.env
+!.env.example
