@@ -1,19 +1,11 @@
-FROM jupyter/all-spark-notebook
+ARG BASE_IMAGE=quay.io/jupyter/all-spark-notebook:00987883e58d
+FROM ${BASE_IMAGE}
 
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
 
-ARG user_root
-ARG user
-ARG password
+COPY requirements.txt /tmp/sparkwork-requirements.txt
+RUN python -m pip install --no-cache-dir -r /tmp/sparkwork-requirements.txt
 
-# user root: sudo -s
-# RUN sudo -s
-# RUN sudo apt-get update && sudo apt-get upgrade
-# RUN sudo apt install -y netcat
-# RUN su ${user}
-
-COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
-
-EXPOSE 8888
+WORKDIR /home/jovyan/work
+EXPOSE 8888 4040

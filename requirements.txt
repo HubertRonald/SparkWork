@@ -1,3 +1,2 @@
-findspark
-jupyterlab_theme_solarized_dark
-jupyterlab-legos-ui
+# Notebook helper retained from the historical project and pinned for repeatability.
+findspark==2.0.1
